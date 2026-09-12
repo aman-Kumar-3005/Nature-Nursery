@@ -1,0 +1,8 @@
+# robots.txt for Nature Nursery, Indore
+# https://naturenursery.in/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://naturenursery.in/sitemap.xml

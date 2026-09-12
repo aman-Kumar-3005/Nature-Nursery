@@ -1,0 +1,384 @@
+/* ==========================================================================
+   Nature Nursery, Indore - Responsive Stylesheet
+   Full cross-device support (320px to 2560px)
+   ========================================================================== */
+
+/* --- Extra Large Screens (>= 1400px) --- */
+@media (min-width: 1400px) {
+  .hero-headline {
+    font-size: 3.8rem;
+  }
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* --- Compact Desktop Header (1200px - 1360px) --- */
+@media (min-width: 1200px) and (max-width: 1360px) {
+  .nav-link {
+    padding: 6px 8px !important;
+    font-size: 0.84rem !important;
+  }
+  .header-desktop-actions {
+    gap: 8px !important;
+  }
+  .header-desktop-actions .btn-nature-call,
+  .header-desktop-actions .btn-nature-whatsapp {
+    padding: 0 12px !important;
+    font-size: 0.82rem !important;
+    height: 38px !important;
+  }
+  .brand-name {
+    font-size: 1.18rem !important;
+  }
+  .brand-logo-icon {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.15rem !important;
+  }
+}
+
+/* --- Laptops, Tablets & Mobile Handhelds (<= 1199.98px) --- */
+@media (max-width: 1199.98px) {
+  .hero-headline {
+    font-size: 2.8rem;
+  }
+  .section-title {
+    font-size: 2.1rem;
+  }
+  .page-hero-title {
+    font-size: 2.4rem;
+  }
+
+  /* Switch to Mobile Navigation Drawer */
+  .desktop-nav-wrap {
+    display: none !important;
+  }
+
+  .header-desktop-actions {
+    display: none !important;
+  }
+
+  .header-mobile-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex !important;
+  }
+
+  .site-nav-menu {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    right: -340px;
+    width: 320px;
+    max-width: 86vw;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.22);
+    padding: 24px 20px;
+    flex-direction: column;
+    z-index: 1060;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+  }
+
+  .site-nav-menu.active {
+    right: 0;
+  }
+
+  .nav-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-drawer-close {
+    background: var(--mint-soft);
+    border: 1px solid var(--border-medium);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-drawer-close:hover {
+    background: var(--primary);
+    color: #ffffff;
+  }
+
+  .site-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .site-nav-list .nav-link {
+    font-size: 0.98rem;
+    padding: 11px 14px !important;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: var(--text-main) !important;
+  }
+
+  .site-nav-list .nav-link:hover,
+  .site-nav-list .nav-link.active {
+    background-color: var(--mint-soft);
+    color: var(--primary) !important;
+  }
+
+  .site-nav-list .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-drawer-contact {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-backdrop {
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 43, 30, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* --- Tablets & Small Screens (<= 991.98px) --- */
+@media (max-width: 991.98px) {
+
+  /* Hero adjustments */
+  .hero-section {
+    padding: 70px 0 80px;
+  }
+
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-feature-card {
+    margin-top: 36px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .stat-number {
+    font-size: 2.4rem;
+  }
+
+  .cta-banner-strip {
+    padding: 36px 26px;
+    text-align: center;
+  }
+
+  .cta-banner-strip .d-flex {
+    justify-content: center !important;
+  }
+}
+
+/* --- Small Tablets & Large Phones (<= 767.98px) --- */
+@media (max-width: 767.98px) {
+  /* Announcement bar */
+  .announcement-bar .d-none-mobile {
+    display: none !important;
+  }
+  .announcement-bar {
+    text-align: center;
+    font-size: 0.78rem;
+  }
+
+  /* Typography */
+  .hero-headline {
+    font-size: 2.15rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .page-hero {
+    padding: 50px 0 60px;
+  }
+
+  .page-hero-title {
+    font-size: 2rem;
+  }
+
+  /* Spacing */
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .section-padding-sm {
+    padding: 35px 0;
+  }
+
+  /* Floating Bottom Contact Bar Active on Mobile */
+  .mobile-bottom-bar {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 74px; /* prevent content occlusion by mobile bottom bar */
+  }
+
+  .floating-whatsapp-btn {
+    bottom: 84px; /* raise above mobile bottom bar */
+    right: 18px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+  }
+
+  .back-to-top {
+    bottom: 146px;
+    right: 22px;
+  }
+
+  /* Bonsai and Category cards */
+  .category-card-img-wrap,
+  .bonsai-img-wrap {
+    height: 200px;
+  }
+
+  .filter-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+  }
+
+  /* Map */
+  .map-wrapper iframe {
+    height: 300px;
+  }
+
+  /* Lightbox */
+  .lightbox-img-wrap {
+    height: 320px;
+  }
+
+  /* Advisory Card */
+  .advisory-card {
+    padding: 20px;
+  }
+
+  .advisory-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Compact Smart Phones (<= 480px) --- */
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-logo-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .hero-headline {
+    font-size: 1.85rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .btn-nature-primary,
+  .btn-nature-outline,
+  .btn-nature-whatsapp,
+  .btn-nature-call {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-trust-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .bonsai-action-group {
+    flex-direction: column;
+  }
+
+  .custom-modal-dialog {
+    margin: 10px;
+  }
+
+  .stat-box {
+    padding: 10px 5px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+}
+
+/* --- High-contrast & Print Accessibility --- */
+@media print {
+  .site-header,
+  .site-footer,
+  .floating-whatsapp-btn,
+  .mobile-bottom-bar,
+  .back-to-top {
+    display: none !important;
+  }
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+}
